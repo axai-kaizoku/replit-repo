@@ -21,5 +21,5 @@ function swap(arr,i,j){
 }
 
 const arr = [1,2,3,4,5,6,7]
-rotate(arr,9)
+rotate(arr,2)
 console.log(arr)
