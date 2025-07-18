@@ -3,7 +3,7 @@
  *
  */
 
-const arr = [48,36,12,9,7,42,2]
+const arr = [48, 36, 12, 9, 7, 42, 2]
 
 function findGCD(arr) {
   let n = arr.length
