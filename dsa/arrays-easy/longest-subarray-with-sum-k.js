@@ -5,6 +5,7 @@ const k = 15
 /**
  * Optimal solution
  *  - 2 pointer
+ *  - Sliding window approach
  * tc - 2n
  * sc - 1
  */
