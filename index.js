@@ -7,7 +7,24 @@ const arr = [
  * Optimal
  * Dutchs High Flag Algorithm
  */
-function sortZerosOnesTwos(arr) {}
+function sortZerosOnesTwos(arr) {
+  const n = arr.length
+  let low = 0,
+    mid = 0,
+    high = n - 1
+  while (mid <= high) {
+    if (arr[mid] === 0) {
+      swap(arr, low, mid)
+      low++
+      mid++
+    } else if (arr[mid] === 1) {
+      mid++
+    } else {
+      swap(arr, mid, high)
+      high--
+    }
+  }
+}
 
 /**
  * Better
