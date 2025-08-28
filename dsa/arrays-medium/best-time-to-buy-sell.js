@@ -2,7 +2,7 @@ const arr = [7, 1, 5, 3, 6, 4]
 
 /**
  * Optimal
- * Dynamic programming
+ * Dynamic programming - remembering the past
  */
 var maxProfit = function (prices) {
     const n = prices.length
