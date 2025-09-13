@@ -1,6 +1,6 @@
 const arr = [5, 4, 3, 2, 1]
 
-function quickSort(arr) {
+function selectionSort(arr) {
   const n = arr.length
   for (let i = 0; i <= n - 2; i++) {
     let mini = i
@@ -19,5 +19,5 @@ function swap(arr, i, j) {
   arr[j] = temp
 }
 
-quickSort(arr)
+selectionSort(arr)
 console.log(arr)
