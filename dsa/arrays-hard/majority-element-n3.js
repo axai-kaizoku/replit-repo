@@ -50,21 +50,18 @@ function majorityElementN3Optimal(nums) {
  * Hashing
  */
 function majorityElementN3Better(nums) {
-    const n = nums.length,
-        ls = [],
-        map = {},
-        min = Math.floor(n / 3);
-
+    const n = nums.length;
+    const n3 = Math.floor(n / 3);
+    const ls = [],
+        map = {};
     for (let i = 0; i < n; i++) {
-        map[nums[i]] = map[nums[i]] ? map[nums[i]] + 1 : 1;
-        if (map[nums[i]] === min) {
-            ls.push(arr[i]);
-        }
-        if (ls.length === 2) {
-            break;
+        map[nums[i]] = (map[nums[i]] || 0) + 1;
+    }
+    for (let key in map) {
+        if (map[key] > n3) {
+            ls.push(Number(key));
         }
     }
-
     return ls;
 }
 
