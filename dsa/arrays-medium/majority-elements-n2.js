@@ -1,4 +1,4 @@
-const arr = [2, 2, 1, 1, 1, 2, 2]
+const arr = [2, 2, 1, 1, 1, 2, 2];
 
 /**
  * Optimal
@@ -6,56 +6,56 @@ const arr = [2, 2, 1, 1, 1, 2, 2]
  */
 var majorityElement = function (nums) {
     let count = 0,
-        el = 0
-    const n = nums.length
-    const n2 = n / 2
+        el = 0;
+    const n = nums.length;
+    const n2 = n / 2;
 
     for (let i = 0; i < n; i++) {
         if (count === 0) {
-            count = 1
-            el = nums[i]
+            count = 1;
+            el = nums[i];
         } else if (nums[i] === el) {
-            count++
+            count++;
         } else {
-            count--
+            count--;
         }
     }
 
-    let count1 = 0
+    let count1 = 0;
     for (let i = 0; i < n; i++) {
-        if (nums[i] == el) count1++
+        if (nums[i] == el) count1++;
     }
 
     if (count1 > n2) {
-        return el
+        return el;
     }
 
-    return -1
-}
+    return -1;
+};
 
 /**
  * Hashing
  */
 var majorityElement2 = function (nums) {
-    let map = {}
-    let n = nums.length
-    let n2 = n / 2
+    let map = {};
+    let n = nums.length;
+    let n2 = n / 2;
 
     for (let i = 0; i < n; i++) {
-        map[nums[i]] = 1
+        map[nums[i]] = 1;
     }
 
     for (let i = 0; i < n; i++) {
-        map[nums[i]]++
+        map[nums[i]]++;
     }
 
     for (let num in map) {
         if (map[num] - 1 > n2) {
-            return Number(num)
+            return Number(num);
         }
     }
 
-    return -1
-}
+    return -1;
+};
 
-console.log(majorityElement(arr))
+console.log(majorityElement(arr));
