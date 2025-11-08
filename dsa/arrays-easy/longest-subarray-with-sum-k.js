@@ -9,6 +9,7 @@ const k = 15
  * tc - 2n
  * sc - 1
  */
+
 function findLongestSubArray(arr, k) {
    const n = arr.length
    let left = 0,
@@ -35,7 +36,7 @@ function findLongestSubArray(arr, k) {
 /**
  * Better
  * Hashing
- * TC - n2
+ * TC - n
  * SC - n
  */
 function findLongestSubArray2(arr, k) {

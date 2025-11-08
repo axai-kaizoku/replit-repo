@@ -40,10 +40,10 @@ function countSubArray1(nums, k) {
   return count;
 }
 
-// const arr = [1, 2, 3, -3, 1, 1, 1, 4, 2, -3];
-const arr = [1, -1, 0];
+const arr = [1, 2, 3, -3, 1, 1, 1, 4, 2, -3];
+// const arr = [1, -1, 0];
 // const arr = [3, -3, 1, 1, 1];
 
-const k = 0;
+const k = 3;
 
 console.log(countSubArray(arr, k));
